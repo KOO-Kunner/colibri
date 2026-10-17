@@ -1,0 +1,8 @@
+build/
+models/
+bindings/python/.venv/
+*.o
+*.so
+*.clb
+__pycache__/
+*.pyc

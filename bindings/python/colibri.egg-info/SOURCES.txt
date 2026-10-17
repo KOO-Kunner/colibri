@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+colibri/__init__.py
+colibri/_ffi.py
+colibri.egg-info/PKG-INFO
+colibri.egg-info/SOURCES.txt
+colibri.egg-info/dependency_links.txt
+colibri.egg-info/top_level.txt

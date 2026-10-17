@@ -1,0 +1,80 @@
+Attaching to process 18125
+Reading symbols from /usr/bin/python3.14...
+(No debugging symbols found in /usr/bin/python3.14)
+Reading symbols from /usr/lib/x86_64-linux-gnu/libm.so.6...
+Reading symbols from /usr/lib/debug/.build-id/20/00a7e6c07f2ef41f3d22f773393360523edc21.debug...
+Reading symbols from /usr/lib/x86_64-linux-gnu/libz.so.1...
+(No debugging symbols found in /usr/lib/x86_64-linux-gnu/libz.so.1)
+Reading symbols from /usr/lib/x86_64-linux-gnu/libexpat.so.1...
+(No debugging symbols found in /usr/lib/x86_64-linux-gnu/libexpat.so.1)
+Reading symbols from /usr/lib/x86_64-linux-gnu/libc.so.6...
+Reading symbols from /usr/lib/debug/.build-id/06/6527e430a32768d82741e00b81eebb1a872294.debug...
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug/.build-id/6b/2f4bfcb50bb93f530e1992b8a9d112650bdae7.debug...
+Reading symbols from /usr/lib/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so...
+(No debugging symbols found in /usr/lib/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so)
+Reading symbols from /usr/lib/x86_64-linux-gnu/libffi.so.8...
+(No debugging symbols found in /usr/lib/x86_64-linux-gnu/libffi.so.8)
+Reading symbols from /home/amin01/colibri/build/libcolibri.so...
+(No debugging symbols found in /home/amin01/colibri/build/libcolibri.so)
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x000075ef46d42ad3 in clb_map_put ()
+   from /home/amin01/colibri/build/libcolibri.so
+
+Thread 1 (Thread 0x75ef4749f1c0 (LWP 18125) "python3"):
+#0  0x000075ef46d42ad3 in clb_map_put () from /home/amin01/colibri/build/libcolibri.so
+No symbol table info available.
+#1  0x000075ef46d3c5cd in clb_tokenizer_create () from /home/amin01/colibri/build/libcolibri.so
+No symbol table info available.
+#2  0x000075ef46d3e0d7 in clb_model_load () from /home/amin01/colibri/build/libcolibri.so
+No symbol table info available.
+#3  0x000075ef46d400d1 in clb_engine_create () from /home/amin01/colibri/build/libcolibri.so
+No symbol table info available.
+#4  0x000075ef46d52056 in ?? () from /usr/lib/x86_64-linux-gnu/libffi.so.8
+No symbol table info available.
+#5  0x000075ef46d4dd16 in ?? () from /usr/lib/x86_64-linux-gnu/libffi.so.8
+No symbol table info available.
+#6  0x000075ef46d507ae in ffi_call () from /usr/lib/x86_64-linux-gnu/libffi.so.8
+No symbol table info available.
+#7  0x000075ef46d7782b in ?? () from /usr/lib/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so
+No symbol table info available.
+#8  0x000075ef46d78285 in ?? () from /usr/lib/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so
+No symbol table info available.
+#9  0x000000000052f70c in _PyObject_MakeTpCall ()
+No symbol table info available.
+#10 0x000000000055048f in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#11 0x000000000058cce4 in ?? ()
+No symbol table info available.
+#12 0x0000000000536b4d in ?? ()
+No symbol table info available.
+#13 0x0000000000595b1f in ?? ()
+No symbol table info available.
+#14 0x000000000052f622 in _PyObject_MakeTpCall ()
+No symbol table info available.
+#15 0x000000000055cee1 in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#16 0x0000000000547ee6 in PyEval_EvalCode ()
+No symbol table info available.
+#17 0x00000000006cab01 in ?? ()
+No symbol table info available.
+#18 0x00000000006c551a in ?? ()
+No symbol table info available.
+#19 0x00000000006c52f4 in ?? ()
+No symbol table info available.
+#20 0x00000000006c468b in Py_RunMain ()
+No symbol table info available.
+#21 0x0000000000673874 in Py_BytesMain ()
+No symbol table info available.
+#22 0x000075ef4722a601 in __libc_start_call_main (main=main@entry=0x673830, argc=argc@entry=4, argv=argv@entry=0x7ffc25a95a08) at ../sysdeps/nptl/libc_start_call_main.h:59
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -6097916391205361198, 140720940341768, 4, 129670555504640, 11038160, -6097916391159223854, -4649654017737741870}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x672e1b, 0xa86dc8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 6762011}}}
+        not_first_call = <optimized out>
+#23 0x000075ef4722a718 in __libc_start_main_impl (main=0x673830, argc=4, argv=0x7ffc25a95a08, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffc25a959f8) at ../csu/libc-start.c:360
+No locals.
+#24 0x0000000000672c45 in _start ()
+No symbol table info available.
+Detaching from program: /usr/bin/python3.14, process 18125
+[Inferior 1 (process 18125) detached]
