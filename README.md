@@ -1,6 +1,7 @@
 # 🐦 Colibri · 纯 C 轻量大模型推理引擎
 
 <p align="center">
+  <img src="https://github.com/KOO-Kunner/colibri/actions/workflows/ci.yml/badge.svg" alt="CI Status">
   <img src="https://img.shields.io/badge/Language-C11-blue.svg" alt="C11">
   <img src="https://img.shields.io/badge/Dependencies-Zero-brightgreen.svg" alt="Zero Dependencies">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">

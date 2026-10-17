@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Build C Library
+      run: make -j
+
+    - name: Run C Unit Tests
+      run: make test
+
+    - name: Install Python Dependencies
+      run: |
+        cd bindings/python
+        pip install -e .
+
+    - name: Run Python Bindings Test
+      run: |
+        cd bindings/python
+        python3 ../../tools/make_tiny_model.py --output ./tiny_random.clb
+        export COLIBRI_LIB=$(pwd)/../build/libcolibri.so
+        export COLIBRI_MODEL=$(pwd)/tiny_random.clb
+        python3 examples/basic.py
